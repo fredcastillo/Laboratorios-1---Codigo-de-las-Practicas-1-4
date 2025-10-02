@@ -1,0 +1,90 @@
+Comandos usados practica 1
+
+En este laboratorio no se utilizaron comandos.
+
+============================================
+
+Comandos usados practica 2
+
+ifconfig
+
+*PARAMETROS DE RED A IP ESTATICA*
+
+nmcli con show
+nmcli con mod ens33 ipv4.addresses 192.168.100.188/24
+nmcli con mod ens33 ipv4.gateway 192.168.100.1
+nmcli con mod ens33 ipv4.dns "8.8.8.8 8.8.4.4"
+nmcli con mod ens33 ipv4.method manual
+nmcli con up  ens33 
+
+ifconfig
+
+*PARAMETROS DE RED A DHCP*
+
+nmcli con show
+nmcli con mod ens33 ipv4.method auto
+nmcli con up ens33
+
+
+*OTRAS OPCIONES DE PARA MODIFICAR LOS PARAMETROS*
+
+nmtui
+
+============================================
+
+Comandos usados practica 3
+
+*Comandos de Administración (Root)*
+
+• sudo su
+• useradd -m FredCastillo
+• cat /etc/shadow
+• passwd FredCastillo
+• usermod -aG wheel FredCastillo
+• su - FredCastillo
+• sudo su - Fredcastillo   
+• exit
+
+*Creación y Adición de Usuario y Grupo*
+
+• groupadd Guest
+• cat /etc/group
+• useradd modest
+• usermod -aG Guest modest
+
+Comandos de Eliminación
+
+• userdel -r modest
+• cat /etc/shadow
+• groupdel Guest
+• cat /etc/group 	
+
+============================================
+
+Comandos usados practica 4
+
+
+Creación y Edición
+
+• mkdir materia
+• cd materia
+• touch estudiante.txt
+• nano estudiante.txt
+• cat estudiante.txt
+• ls -l
+
+Modificación de Permisos
+• chmod 700 estudiante.txt (Control total solo para el usuario)
+• chmod 070 estudiante.txt (Control total solo para el grupo)
+• chmod -x estudiante 
+
+Manipulación y Eliminación
+
+• cd ..
+• mkdir materias2
+• cp materia/estudiante.txt materias2/
+• rm -r materias2
+• rm materia/estudiante.txt
+• rmdir materia
+
+============================================
